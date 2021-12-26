@@ -17,10 +17,20 @@ command = "atari800";
 
 Add_CLP(command);
 Add_CLP("-config", emulatorConfigFile)
-Add_CLP("-xl")
+
+Show_Message(fileToRun)
+
+if (fileToRun.indexOf("320 XE") != -1) {
+    Show_Message("320 XE")
+    Add_CLP("-320xe")
+} else {
+    Show_Message("XL")
+    Add_CLP("-xl")
+} 
 
 if (itemType.contains("atr")) {
     Add_CLP("-nobasic")
+
     // add all the disc images to drives
     for(var i = 0; i < itemPathsAndFiles.length; i++) {
         Add_CLP(itemPathsAndFiles[i])
