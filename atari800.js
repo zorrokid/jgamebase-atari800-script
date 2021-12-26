@@ -1,5 +1,8 @@
 // Script to start Atari games for Atari XL GameBase
 
+// Reference for jGameBase scripting symbols:
+// https://jgamebase.sourceforge.io/symbols/_global_.html#itemPathsAndFiles
+
 // 1) Copy this file and config file atari800.cfg to Scripts folder in Atari XL GameBase
 
 // 2) Set correct rom paths in atari800.cfg
@@ -36,6 +39,6 @@ if (itemType.contains("atr")) {
 
 } else {
 
-	Show_Message(NOT_SUPPORTED + "\n\nSupported types: atr");
+	Show_Message(NOT_SUPPORTED + "\n\nSupported types: atr, xex");
 
 }
