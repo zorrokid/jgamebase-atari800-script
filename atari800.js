@@ -19,10 +19,6 @@ Add_CLP(command);
 Add_CLP("-config", emulatorConfigFile)
 Add_CLP("-xl")
 
-Show_Message("Config file is: " + emulatorConfigFile)
-Show_Message("Item types: " + itemType)
-Show_Message("fileToRun: " + fileToRun)
-
 if (itemType.contains("atr")) {
     Add_CLP("-nobasic")
     // add all the disc images to drives
